@@ -1,3 +1,4 @@
+
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 @import url("https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap");
@@ -22,7 +23,7 @@
   --bg-color: #1f242d;
   --second-bg-color: #323946;
   --text-color: #fff;
-  --main-color: rgb(255, 0, 0);
+  --main-color: #D80404;
 }
 
 body {
@@ -33,7 +34,7 @@ body {
 a {
   color: var(--text-color);
 }
-
+/*! HEADER */
 .header {
   /* border: 2px solid red; */
   width: 100%;
@@ -41,7 +42,7 @@ a {
   justify-content: space-between;
   flex-wrap: wrap;
   align-items: center;
-  padding: 2rem;
+  padding: 2rem 5rem;
   background: var(--bg-color);
   position: fixed;
   top:0;
@@ -57,10 +58,19 @@ a {
   /* font-family: "Faster One"; */
 }
 
+.navbar{
+  /* border: 2px solid red; */
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  
+  /* width: 100%; */
+}
+
 .navbar a {
   font-size: 1.2rem;
   color: var(--text-color);
-  margin-left: 4rem;
+  margin-left: 2rem;
 }
 
 .navbar a:hover,
@@ -74,23 +84,26 @@ section {
   padding: 0 10rem;
   gap: 5rem;
 }
-.home-content {
-  /* border: 2px solid red; */
-  flex: 2;
-  text-align: justify;
-}
-.home-img {
-  /* border: 2px solid red; */
-  flex: 1;
-  text-align: center;
-}
+/*! HOME */
 
 .home {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+.home-content {
+  /* border: 2px solid red; */
+  width: 70%;
+  text-align: justify;
+}
+.home-img {
+  /* border: 2px solid red; */
+  width: 30%;
+  text-align: center;
+}
+
 .home-img img {
+  width: 100%;
   max-width: 20rem;
   border-radius: 10%;
   animation: floatImage 3s ease-in-out infinite;
@@ -100,11 +113,8 @@ section {
   font-size: 2rem;
   font-weight: 700;
 }
-
-.info {
-  margin-top: 2rem;
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 1rem;
+.home-content .title {
+  text-align: left;
 }
 
 .name {
@@ -114,24 +124,29 @@ section {
   font-weight: 700;
   line-height: 1.3;
 }
+.info {
+  margin-top: 2rem;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 1rem;
+}
+
 
 .social-media {
   display: flex;
 }
 
 .social-media a {
-  display: flex;
-  /* flex-direction: row; */
-  justify-content: center;
-  align-items: center;
   width: 2rem;
   height: 2rem;
   /* background: transparent; */
   /* border: .2rem solid var(--main-color); */
-  border-radius: 50%;
   font-size: 3rem;
   color: var(--main-color);
   margin: 5rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
   transition: 0.5s ease;
 }
 
@@ -153,6 +168,8 @@ section {
   font-weight: 600;
 }
 
+/*! ABOUT */
+
 .about {
   /* border: 2px solid red; */
   display: flex;
@@ -164,16 +181,17 @@ section {
 
 .about-img {
   /* border: 2px solid red; */
-  flex: 1;
+  width: 25%;;
   text-align: center;
 }
 .about-content {
   /* border: 2px solid red; */
-  flex: 3;
+  width: 75%;;
   text-align: justify;
 }
 
 .about-img img {
+  width: 100%;
   max-width: 20rem;
   border-radius: 10%;
   animation: floatImage 3s ease-in-out infinite;
@@ -200,60 +218,69 @@ span {
   color: var(--main-color);
 }
 
-.services{
+/*! SKILLS */
+
+
+.skills{
   padding-top: 6rem;
+  padding-bottom: 6rem;
 }
-.services .heading{
+.skills .heading{
   margin-bottom: 4rem;
+  /* border: 2px solid red; */
 }
 
-.services-container {
+.skills-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
 }
 
-.services-box {
-  flex: 1 1 30rem;
+.skills-box {
+  flex: 1 1 20rem;
   background: var(--second-bg-color);
-  padding: 2rem 1rem 3rem;
+  padding: 1rem;
   border-radius: 2rem;
   text-align: center;
   border: 0.2rem solid var(--bg-color);
   transition: 0.5s ease;
 }
 
-.services-box:hover:hover {
+.skills-box:hover:hover {
   border-color: var(--main-color);
   transform: scale(1.02);
   box-shadow: 0 0 3rem var(--main-color);
 }
-.services-box i{
+.skills-box i{
     font-size: 5rem;
     color: var(--main-color);
 }
 
-.services-box h3{
+.skills-box h3{
     font-size: 2rem;
 }
 
-.services-box p{
-    font-size: 1rem;
-    margin: 2rem 1rem;
+.skills-box p{
+    font-size: .7rem;
+    margin: 1rem;
     text-align: justify;
 }
 
-.portfolio{
+/*! PORTFOLİO */
+
+
+.projects{
     padding-top: 6rem;
+    padding-bottom: 6rem;
     background: var(--second-bg-color);
 }
 
-.portfolio h2{
-    margin-bottom: 4rem;
+.projects h2{
+    margin-bottom: 2rem;
 }
 
-.portfolio-container{
+.projects-container{
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
@@ -261,21 +288,24 @@ span {
     /* height: 100%; */
     /* border: 2px solid red; */
 }
-.portfolio-box{
-    flex: 1 1 30rem;
+.projects-box{
+    flex: 1 1 20rem;
+    justify-content: center;
     border-radius: 2rem;
     /* border: 2px solid red; */
     overflow: hidden;
+    position: relative;
+    
 
 }
 
-.portfolio-box img{
+.projects-box img{
     width: 100%;
     transition: all 1s;
 
 }
 
-.portfolio-box:hover img{
+.projects-box:hover img{
     transform: scale(1.1);
 }
 
@@ -288,6 +318,30 @@ span {
     background: var(--second-bg-color);
 }
 
+.pro{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  /* border: 2px solid red; */
+  padding: 1rem;
+  transform: translateY(100%);
+  transition: all 1s;
+}
+.projects-box:hover .pro{
+  transform: translateY(0);
+
+}
+
+.pro a{
+  font-size: 2rem;
+  font-family: "Orbitron", sans-serif;
+  color: var(--main-color);
+  /* text-shadow: 0 0 2px var(--text-color); */
+  
+}
+
 .footer-text p{
     font-size: 1rem;
 }
@@ -298,15 +352,19 @@ span {
     padding: .8rem;
     background: var(--main-color);
     border-radius: .8rem;
+    box-shadow: 0 0 1rem var(--main-color);
     transition: .5s ease;
 }
 
-.footer-iconTop a{
-box-shadow: 0 0 1rem var(--main-color);
-}
 .footer-iconTop a i{
 font-size: 2.4rem;
 color:var(--second-bg-color);
+}
+
+.footer-iconTop a:hover{
+  border-color: var(--main-color);
+  transform: scale(1.02);
+  box-shadow: 0 0 3rem var(--main-color);
 }
 
 
@@ -320,4 +378,35 @@ color:var(--second-bg-color);
   100%{
       transform: translateY(0);
   }
+}
+
+
+
+@media (max-width: 992px)
+{
+  html{
+    font-size: 10px;
+  }
+
+  .header{
+    flex-direction: column;
+  }
+    .name{
+      font-size: 2rem;
+    }
+
+    .home{
+      flex-direction: column;
+    }
+    .about{
+      flex-direction: column;
+    }
+
+    section{
+      padding: 0 3rem;
+    }
+
+    footer{
+      flex-direction: column;
+    }
 }
