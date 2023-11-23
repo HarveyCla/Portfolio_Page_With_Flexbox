@@ -39,6 +39,7 @@ a {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   align-items: center;
   padding: 2rem;
   background: var(--bg-color);
@@ -46,6 +47,7 @@ a {
   top:0;
   left:0;
   width:100%;
+  z-index: 3;
 }
 .logo {
   font-size: 2rem;
